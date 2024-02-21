@@ -1,0 +1,10 @@
+/UserService/Application/bin/
+/UserService/Application/obj/
+/UserService/Infrastructure/bin/
+/UserService/Infrastructure/obj/
+/UserService/UserService/bin/
+/UserService/UserService/obj/
+/UserService/Core/bin/
+/UserService/Core/obj/
+/UserService/Tests/Application.Tests/bin/
+/UserService/Tests/Application.Tests/obj/
