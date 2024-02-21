@@ -18,11 +18,8 @@ builder.Services.AddInfrastructureServices(builder.Configuration);
 /********************************************************************************************************/
 
 //OpenTelemetry
-const string serviceName = "UserService";
-builder.Services.AddCustomOpenTelemetry(serviceName);
-builder.Logging.AddCustomOpenTelemetryLogging(serviceName);
-//Honeycomb
-builder.Services.AddHoneycomb(builder.Configuration);
+builder.Services.AddCustomOpenTelemetry(builder.Configuration);
+builder.Logging.AddCustomOpenTelemetryLogging(builder.Configuration);
 
 var app = builder.Build();
 
