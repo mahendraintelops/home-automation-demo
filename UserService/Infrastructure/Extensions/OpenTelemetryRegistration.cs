@@ -15,11 +15,9 @@ namespace Infrastructure.Extensions
             services.AddOpenTelemetry()
                 .ConfigureResource(resource => resource.AddService(serviceName))
                 .WithTracing(tracing => tracing
-                    .AddAspNetCoreInstrumentation()
-                    .AddConsoleExporter())
+                    .AddAspNetCoreInstrumentation())
                 .WithMetrics(metrics => metrics
-                    .AddAspNetCoreInstrumentation()
-                    .AddConsoleExporter());
+                    .AddAspNetCoreInstrumentation());
             return services;
         }
 
@@ -30,8 +28,7 @@ namespace Infrastructure.Extensions
                 options
                     .SetResourceBuilder(
                         ResourceBuilder.CreateDefault()
-                            .AddService(serviceName))
-                    .AddConsoleExporter();
+                            .AddService(serviceName));
             });
         }
 
